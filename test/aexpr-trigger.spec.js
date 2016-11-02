@@ -4,6 +4,20 @@ import aexpr from 'aexpr-interpretation';
 import trigger from './../src/aexpr-trigger.js';
 
 describe('Trigger for Active Expressions', () => {
+    it("chainable", () => {
+        let obj = {a: 2},
+            spy = sinon.spy();
+
+        let axp = aexpr(() => obj.a > 5, locals);
+        trigger(axp)
+            .onBecomeFalse(spy)
+            .onBecomeTrue(spy)
+            .onBecomeFalse(spy)
+            .onBecomeTrue(spy);
+
+        expect(spy).to.be.calledTwice;
+    });
+
     it("flank up", () => {
         let obj = {a: 2},
             spy = sinon.spy();

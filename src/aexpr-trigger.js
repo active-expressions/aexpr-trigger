@@ -15,6 +15,8 @@ class Trigger {
         if(this.aexpr.getCurrentValue()) {
             callback();
         }
+
+        return this;
     }
 
     onBecomeFalse(callback) {
@@ -26,6 +28,8 @@ class Trigger {
         if(!this.aexpr.getCurrentValue()) {
             callback();
         }
+
+        return this;
     }
 }
 
