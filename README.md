@@ -1,3 +1,5 @@
+# DEPRECATED: As of version 3, aexpr-trigger are now part of the base library. View it in [Lively4](https://lively-kernel.org/lively4/lively4-core/start.html).
+
 # aexpr-trigger [![Build Status](https://travis-ci.org/active-expressions/aexpr-trigger.svg?branch=master)](https://travis-ci.org/active-expressions/aexpr-trigger)
 Convenience functions for Active Expressions
 
